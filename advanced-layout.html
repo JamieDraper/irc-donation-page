@@ -1,0 +1,1976 @@
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
+
+<style>
+@font-face {
+  font-family: "AkzidenzGroteskBEBold";
+  src: url('https://storage.googleapis.com/fa-assets/akzidgrostdbol.otf');
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBEBold";
+  src: url('https://storage.googleapis.com/fa-assets/AkzidenzGroteskStd-Boldx.eot?#iefix');
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBERegular";
+  src: url('https://storage.googleapis.com/fa-assets/akzidgrostdreg.otf');
+}
+
+body {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size:cover;
+    min-width:1px;
+    background-color: rgb(246, 246, 246);
+
+}
+
+.dd-form-wrapper .dd-progress {
+    display:none;
+}
+
+/* basic styling */
+.amount-btn, .next-button, .submit-button, input[type=submit], .dd-form .submit input, .dd-form .confirmation-buttons .button, .button{
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 6px 19px;
+    color: black !important;
+    cursor: pointer;
+    text-decoration:none !important;
+    width:100px;
+    display:inline-block;
+    margin: 10px;
+    font-size: 24px;
+    background: rgb(253, 197, 19) url(https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/btn-arrow.png) right center no-repeat;
+    background-position: 255px 21px;
+}
+
+.confirmation-buttons input:hover, .confirmation-buttons input:focus {
+  color: white !important;
+} 
+
+.dd-form div.fieldset hr {
+  border-top: 1px solid #e5e5e5;
+  margin: 0;
+}
+.dd-form div.fieldset .field-group.gift-aid hr {
+  display: block;
+}
+
+
+.submit-button, input[type=submit], .dd-form .submit input, .dd-form .confirmation-buttons .button{
+    max-width: 12em;
+    height: 58px;
+    width:100%;
+    line-height:2;
+}
+
+    .summary-confirm{
+        bottom:0px !important;
+        position:fixed !important;
+        left:0px !important;
+        width:100% !important;
+        border: 6px solid white !important;
+        background-color: black !important;
+    }
+    .summary-confirm h1{
+            font-family: 'AkzidenzGroteskBEBold', sans-serif;
+            text-align:center;
+            color:white;
+    }
+
+.dd-form .submit{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.amount-btn.selected, .summary-confirm input {
+    color:#e35e14;
+    background: white !important;
+    box-shadow: 0px -2px 0px 0px #bf5012,inset 0px 1px 1px 0px rgba(0,0,0,0.4) !important;
+    top:3px;
+    border:none;
+}
+.summary-confirm input{
+    border-color:#bf5012 !important;
+    box-shadow: 0 3px 0 0 #bf5012 !important;
+    -webkit-box-shadow:  0 3px 0 0 #bf5012 !important;
+}
+
+#amount-container{
+        text-align:center;
+    }
+
+    #amount-btn-container{
+        margin-bottom:30px;
+    }
+
+
+.bank-details .field, .personal-details-form .field{
+    margin-bottom:3px !important;
+    margin-top:3px !important;
+}
+
+.dd-form #manual-address-btn-wrapper div {
+  margin:20px;
+  font-size:18px;
+}
+
+.field-group.bank-details{
+    padding-right: 130px;
+    background-image: url(/images/Direct-Debit-White-BG.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+
+}
+
+h1, h2, h3 {
+    color: black;
+}
+
+.dd-form div.fieldset .field input[type=text], select {
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    max-width: 18em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.dd-form div.fieldset select {
+    font-weight:normal;
+}
+
+#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_ValSummary {
+    margin: 40px;
+    position: relative;
+    top: 40px;
+}
+
+.dd-form div.fieldset .field span.error {
+    display: block;
+    margin: 0px;
+    color: #F00;
+    clear: left;
+    width: 100%;
+    text-align: left;
+}
+
+.field-group{
+    padding: 20px;
+    margin: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.step2 .field-group {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0;
+}
+
+.field-group h3{
+    color:black;
+    font-size:24px;
+}
+
+.other-personal-details, .data-protection{
+    display:none;
+}
+
+.field-group hr, hr{
+    display:none;
+}
+
+label, div.dd-form-wrapper div.dd-form div.fieldset label{
+    text-align:left;
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    font-weight:700;
+    font-family: "AkzidenzGroteskBERegular", sans-serif;
+}
+
+.dd-form div.fieldset .field input[type=text]:focus, .dd-form div.fieldset .field input[type=text]:hover, .dd-form div.fieldset .field input:focus, .dd-form div.fieldset .field select:focus, .dd-form div.fieldset .field textarea:focus{
+    border: 1px solid #ccc !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:3px !important;
+}
+    
+.dd-form div.fieldset .field{
+    text-align:center;
+}
+
+.tip{
+    display:none !important;
+}
+
+.dd-form{
+    width: 100%;
+    /*margin-left: 45%;*/
+    background-color:white;
+    border: none;
+}
+
+.dd-form-wrapper>p{
+    display:none;
+}
+
+#header-box{
+    background-color: #252728;
+    text-align: center;
+    z-index: 2;
+    padding-bottom: 0px;
+    margin-bottom: 50px;
+    padding: 20px;
+    color:white;
+    top:-3px;
+    overflow:visible;
+    color:white !important;
+    margin-left: -2px;
+    margin-top: -2px;
+    margin-right: -2px;
+}
+
+#header-box h1{
+    font-family:'Source Sans Pro', sans-serif;
+    color:white;
+}
+
+#header-box h3{
+    color:white;
+}
+
+.header img{
+    display:inline;
+}
+
+.footer{
+    max-width:12000px;
+    width:100%;
+
+}
+
+.footer img {
+    display:inline;
+}
+
+form{
+    display:none;
+}
+
+.dd-form H2 {
+    /* border: 3px solid red; */
+    background-color: rgb(51,51,51) !important;
+    color:white;
+    font-size: 15px;
+   padding: 17px 20px;
+    }
+
+.summary-confirm{
+    border: 3px solid black;
+    background-color: #f3f3f3;
+}
+
+.summary-confirm h3{
+    text-align:center;
+    color:black;
+    font-weight:bold;
+}
+
+.tick-border-box{
+    margin: 10px 0;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.dd-form div.fieldset .field.radio span input {
+    float:left;
+    padding:0;
+    display:block;
+}
+
+.dd-form div.fieldset .field.radio span label {
+    margin-left:20px;
+}
+
+
+#blanket{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 100001;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size:cover;
+    top: 0px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#blanket-draw{
+        width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #252728;
+    color: white;
+}
+
+
+.progress{
+        max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+h2 .glyphicon{
+    top:4px;
+}
+
+.donation-summary, .personal-summary, .payment-summary{
+    background-color:#f2f2f2;
+    margin-bottom:15px;
+}
+
+
+
+.edit-button{
+    background: none !important;
+    color: #727272 !important;
+    /* text-decoration: underline !important; */
+    text-align: center !important;
+    max-width: 100% !important;
+    border: 0px !important;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    padding: 0px !important;
+    display: inline !important;
+    margin-top: -20px !important;
+    height: auto !important;
+    line-height: 1 !important;
+    margin-bottom: 20px !important;
+}
+.edit-button:hover{
+    color: #727272 !important;
+}
+
+.first-direct-debit {
+    padding-right:20px !important;
+    background:none !important;
+}
+
+#warning-box{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#warning-box h3{
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dd-form-wrapper h4{
+    color:#060;
+    font-weight:bold;
+}
+
+.field.date.required select{
+    width: 30%;
+    display: inline-block;
+    float: left !important;
+}
+
+.field.date.required select:focus{
+    margin:3px !important;
+}
+
+.field.date.required label{
+    width:100%;
+}
+
+.about-you .field{
+    width: 46%;
+}
+
+.not-title-field{
+    display: inline-block !important;
+}
+
+.dd-acknowledgement{
+    display:none !important;
+}
+
+.hidden-confirmation{
+    display:none !important;
+}
+.dd-form-h3{
+    color: black !important;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size:21px;
+}
+
+.first-direct-debit h4 {
+    margin-top: 20px;
+}
+
+.dd-form div.fieldset .summary-group {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.summary-group h3 {
+    text-align: center;
+}
+
+.confirm-text-container{
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.confirm-text-container h3{
+    color: black;
+    line-height: 1.3;
+    font-size: 18px;
+}
+
+.button-facebook, .button-twitter, .button-instagram{
+      width: auto;
+    padding: 10px;
+}
+
+.button-twitter{
+  background-color:#55acee;
+  border: 1px solid white !important;
+  -webkit-box-shadow: 0 3px 0 0 #55acee;
+  box-shadow: 0 3px 0 0 #55acee;
+}
+
+.button-twitter:hover, .button-twitter:active, .button-twitter:focus{
+  background-color:#55acee !important;
+}
+
+.button-instagram{
+  background-color:#125688;
+  border: 1px solid white !important;
+  -webkit-box-shadow: 0 3px 0 0 #125688;
+  box-shadow: 0 3px 0 0 #125688;
+}
+
+.button-instagram:hover, .button-instagram:active, .button-instagram:focus{
+  background-color:#125688 !important;
+}
+
+.button-facebook{
+  background-color:#3b5998;
+  border: 1px solid white !important;
+  -webkit-box-shadow: 0 3px 0 0 #3b5998;
+  box-shadow: 0 3px 0 0 #3b5998;
+}
+
+.button-facebook:hover, .button-facebook:active, .button-facebook:focus{
+  background-color:#3b5998 !important;
+}
+
+.field-group.bank-details{
+  background:none !important;
+}
+
+.center-image-container{
+  text-align:center;
+}
+
+.summary-confirm input[type=submit]{
+  color: black !important;
+  background-color: rgb(253, 197, 19) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+a {
+  border-radius: 0px !important;
+}
+
+  .dd-form-wrapper{
+    margin: 0px;
+  }
+
+  .dd-form {
+      width: 100%;
+      margin-left: 0%;
+      min-width: 0px;
+  }
+
+  .field.date.required select {
+      width: 100%;
+  }
+
+.dd-form div.fieldset .field label {
+  width: 185px;
+}
+  .field-group.bank-details {
+      padding: 20px 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 0;
+
+  }
+  .field-group.bank-details .field {
+    margin-bottom: 20px !important;
+  }
+}
+
+
+
+
+</style>
+<link rel='shortcut icon' href='fhttps://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/irc_uk_favicon.ico' type='image/x-icon'/ >
+<script type="text/javascript">// <![CDATA[
+var loadedSummaryScript = 0;
+var person = {};
+var urlAmounts;
+var amountsInUrl = false;
+if (!window.console) window.console = {};
+if (!window.console.log) window.console.log = function () { };
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+        function precise_round(num, decimals) {
+      var t=Math.pow(10, decimals);   
+       return (Math.round((num * t) + (decimals>0?1:0)*(Math.sign(num) * (10 / Math.pow(100, decimals)))) / t).toFixed(decimals);
+      }
+
+    $(function(){
+    // styling page with IRC elements
+    $('form').prepend('<div class="header-image"></div>');
+    // add header image
+    $('.header-image').css({
+        'background-repeat' : 'no-repeat',
+        'width' : '100%',
+        'height' : '0',
+        'padding-top': '46.5611390285%',
+        'position' : 'relative',
+        'background-position-y': '-83px'
+    });
+
+
+
+    // add logo wrapper
+    $('.header-image').append('<div class="logos-wrapper"</div>');
+    $('.logos-wrapper').css({
+        'position' : 'absolute',
+        'top' : '0',
+        'left' : '0',
+        'bottom' : '0',
+        'right' : '0',
+        'margin' : '0 auto'
+    });
+    // add logo
+    $('.logos-wrapper').append('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/header-logo.jpg" class="logo img-responsive"/>')
+    $('.logos-wrapper').append('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/header-secure-donations.png" class="logo-donations img-responsive"/>')
+
+
+      
+    //console.log("HI THERE");
+      if(typeof loadedMainScript === 'undefined'){
+        loadedMainScript = 1;
+        var donateAmounts = [5,10,20,50,100,150];
+
+        //$('body').prepend('<div id="blanket"><div id="blanket-draw"><img width="107" class="" src="https://s.bsd.net/reprieve/main/page/-/dd-form-assets/logo-white%402x.png" alt="Reprieve"><h2>Together we can save our planet</h2></div></div>');
+
+        if(getParameterByName("amounts") != ""){
+            urlAmounts = getParameterByName("amounts").split('x');
+            amountsInUrl = true;
+            for (var i = 0; i <= urlAmounts.length - 1; i++) {
+                if($.isNumeric(urlAmounts[i])){
+                    donateAmounts[i] = urlAmounts[i];
+                    //console.log(donateAmounts[i])                   
+                }
+            };
+        }
+
+        //CHECK IF ON SUMMARY PAGE
+        if( $.trim( $('.summary-intro').html() ).length ) {
+          $('#blanket').remove();  
+            $('form').show();
+        }
+
+      setTimeout(function () {
+            $('#blanket').remove();
+            $('form').show();
+      }, 800);
+
+      $('.dd-form').prepend($('.header'));
+      $('.header').attr('id', 'header-box');
+      $('body').prepend($('.footer'));
+
+      //move the direct debit box up top
+      $('.dd-form .direct-debit:eq(0)').before($('.donation:eq(0)'));
+      //('<div id="header-box"> <img width="107" class="" src="https://s.bsd.net/reprieve/main/page/-/dd-form-assets/logo-white%402x.png" alt="Reprieve"> <h1 id="firstname-title"></h1></div>');
+
+      $('.dd-form .direct-debit:eq(0)').addClass('first-direct-debit');
+
+      //set headers
+
+      $('.dd-form .step-title1:eq(0)').remove();
+      $('.dd-form .step-title2').html("BILLING DETAILS");
+
+      // remove dividers
+      $('.field-group.udf').remove();
+
+
+      $('.dd-form .direct-debit:eq(0)').prepend("<h3>Great<span class='firstname'></span>! Now just tick to confirm you're setting up a direct debit.</h3>");
+
+      //add contact to about you
+
+      $('.field-group.contact-details .field').each(function(){
+        $(this).appendTo($('.about-you'));
+      });
+
+
+      $('.field-group.contact-details').remove();
+
+      //change about you section
+      $('.about-you .field:eq(0)').before('<div class="field-row">');
+      $('.about-you .field:eq(0)').before('<div class="field-row">');
+      $('.about-you .field:eq(0)').before('<div class="field-row">');
+
+      $('.about-you .field:eq(0)').appendTo($('.field-row:eq(0)'));
+      $('.about-you .field:eq(1)').appendTo($('.field-row:eq(0)'));
+
+      $('.about-you .field:eq(2)').find('input').addClass('firstname-field');
+      $('.about-you .field:eq(2)').appendTo($('.field-row:eq(1)'));
+      
+
+      $('.about-you .field:eq(3)').find('input').addClass('lastname-field');
+      $('.about-you .field:eq(3)').appendTo($('.field-row:eq(1)'));
+      
+
+      $('.about-you .field:eq(4)').find('input').addClass('email-field');
+      $('.about-you .field:eq(4)').appendTo($('.field-row:eq(2)'));
+      
+
+      //$('.about-you .field:eq(6)').find('input').addClass('phone-field');
+      //$('.about-you .field:eq(6)').appendTo($('.field-row:eq(2)'));      
+      
+
+      //handle email confirm
+      $('.about-you .field:eq(5)').addClass('hidden-confirmation');
+
+      //add handler for all inputs not outer title
+      $('.about-you .field').not('.other-title').addClass('not-title-field');
+
+
+      //remove dd info on apge
+      $('.bank-details.direct-debit').remove();
+
+      //dd-form top with h3
+      $('.header h3').addClass('dd-form-h3');
+      $('.header').after($('.dd-form-h3'));
+
+      //change label on other amount:
+      $('.donation:eq(0) input:eq(0)').prev('label').html('Your monthly donation');
+
+
+      //add buttons
+
+
+      $('.donation:eq(0)').prepend("<div id='amount-container'>"); 
+      $('#amount-container').prepend("<div id='amount-btn-container'>"); 
+      $('#amount-container').prepend("<h3>Enter your monthly donation amount:</h3>"); 
+
+      $(donateAmounts).each(function(){
+        $('#amount-btn-container').append("<a href='javascript:;' class='amount-btn' data-value='"+this+"'>£"+this+"</a>")
+      });
+
+
+      // add title to opt in tick box
+      //$('.direct-debit:eq(0)').before("<h2>2. Okay, now tick to confirm</h2>");
+
+      //remove what's your name
+      $('.personal-details-form h3:eq(0)').remove();
+
+      //set submit value
+      $('.submit input').val("Next");
+
+      //TICK BOX ADD CLASS
+     $(".direct-debit:eq(0) input[type='checkbox']").addClass('optin-checkbox')
+
+     // add image up top
+$('.dd-form p:eq(1)').after("<div class='center-image-container'><img src='https://s.bsd.net/reprieve/main/page/-/dd-form-assets/signs.png' /></div>");
+
+      
+
+      //add text to bottom of form
+
+      $('.payment-details-form').after("<p class='pre-submit-opt-in'>By clicking Next you confirm you are the account holder of a personal bank or building society account, that you’re the sole required signatory on the account and that you wish to set up a Direct Debit.</p>");
+
+      //add border to tick box
+      //$(".direct-debit:eq(0) input[type='checkbox']").closest('p').addClass('tick-border-box');
+
+      // hide donation amounts - IRC
+      $('#amount-container').hide();
+      
+
+     // add intro copy section
+    $('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_ValSummary').after('<div class="intro-copy"></div>');
+$('.intro-copy').html('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/yellow-vertical-bar.png" class="inline-bar"/><h1>Make a monthly donation</h1>');
+
+$('.intro-copy').append('<p>Please complete this short online form to make a monthly donation. When you click on Make Donation, you will be directed to a secure server hosted by Rapidata, which processes online monthly donations on our behalf.</p>');
+
+$('.intro-copy').append('<p>Your details will be submitted securely. Fields marked with a ('+'<span class="red">*</span>'+') must be completed</p>');
+// add another step header
+$('.intro-copy').after($('.step-title2').clone());
+$('.step3').after($('.step-title3').clone());
+// name new step headers
+$('.step-title2:eq(0)').html('MONTHLY DONATION');
+$('.dd-form .step-title3:eq(0)').html("BANK DETAILS");
+$('.dd-form .step-title3:eq(1)').html("GIFT AID");
+
+// add new step divs after titles
+$('.dd-form .step-title3:eq(1)').after('<div class="fieldset step4 gift-aid-form"></div>'); 
+
+// move giftaid section
+$('.field-group.gift-aid').appendTo($('.step4'));
+
+// add step 5 title
+$('.step4').after($('.step-title3:eq(0)').clone());
+// add step 5 div
+$('.dd-form .step-title3:eq(2)').after('<div class="fieldset step5 communication-form"></div>');
+$('.dd-form .step-title3:eq(2)').html("COMMUNICATION")
+
+// add numbered circles to headers
+$('.dd-form .step-title2:eq(0)').prepend('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/numb1-circle.png" class="numbered-circle"/>');
+$('.dd-form .step-title2:eq(1)').prepend('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/numb2-circle.png" class="numbered-circle"/>');
+$('.dd-form .step-title3:eq(0)').prepend('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/numb3-circle.png" class="numbered-circle"/>');
+$('.dd-form .step-title3:eq(1)').prepend('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/numb4-circle.png" class="numbered-circle"/>');
+$('.dd-form .step-title3:eq(2)').prepend('<img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/numb5-circle.png" class="numbered-circle"/>');
+
+// ARANGING SECTION 1
+// add opt in elements to "monthly donation"
+$('.first-direct-debit p:eq(2)').prependTo($('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_DonationSection_panelAmounts'));
+$('.first-direct-debit input').prependTo($('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_DonationSection_panelAmounts'));
+$('.first-direct-debit label').prependTo($('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_DonationSection_panelAmounts'));
+$('.first-direct-debit').remove();
+
+// adding currency text to donation amount field
+$('.step1.fieldset .field input[type=text]').after('<span class="currency">GBP</span>');
+// changing label text for date picker
+$('.date label').html('Regular giving collection date');
+
+// collection date notice - copy change and make italic
+$('.step1 p:eq(1)').html('This is your first collection date. If the collection date selected falls within the next 16 days, the first payment may be collected the following month. Subsequent payments will go out on that date every month.');
+$('.step1 p:eq(1)').css('font-style', 'italic');
+
+// ARRANGING SECTION 2
+// add phonenumber field to correct row
+$('.about-you .field:eq(6)').appendTo($('.about-you .field-row:eq(2)'));
+// remove unused p at start of section that's giving extra unwanted margin
+$('.step2 p:eq(0)').remove();
+// move address lookup link
+$('.step2 a').appendTo($('.addressLookup'));
+
+// adding row fields for column arrangement of manual address input
+$('.step2 .field-group h3:eq(0)').after('<div class="field-row"></div>');
+$('.step2 .field-group h3:eq(0)').after('<div class="field-row"></div>');
+$('.step2 .field-group h3:eq(0)').after('<div class="field-row"></div>');
+
+$('.field-group.address .field.text:eq(0)').appendTo($('.field-group.address .field-row:eq(0)'));
+$('.field-group.address .field.text:eq(1)').appendTo($('.field-group.address .field-row:eq(0)'));
+$('.field-group.address .field.text:eq(2)').appendTo($('.field-group.address .field-row:eq(1)'));
+$('.field-group.address .field.text:eq(3)').appendTo($('.field-group.address .field-row:eq(1)'));
+$('.field-group.address .field.text:eq(4)').appendTo($('.field-group.address .field-row:eq(2)'));
+$('.field-group.address .field.text:eq(5)').appendTo($('.field-group.address .field-row:eq(2)'));
+
+// change label copy
+$('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_PersonalDetailsSection_TextBoxFirstName_LabelForTextBox').html('First name');
+$('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_PersonalDetailsSection_TextBoxMobileTelephone_LabelForTextBox').html('Phone number');
+
+// hide address header of manual address input fields
+$('.field-group.address h3').hide();
+
+// SECTION 3 ARRANGEMENT
+// have sort code and account numb 2 col layout
+$('.field-group.bank-details').append('<div class="field-row"></div>');
+$('.field-group.bank-details .field.text:eq(0)').after('<div class="field-row"></div>');
+$('.field-group.bank-details .field.text:eq(2)').appendTo($('.field-group.bank-details .field-row:eq(0)'));
+$('.field-group.bank-details .field.text:eq(2)').appendTo($('.field-group.bank-details .field-row:eq(0)'));
+$('.step3.payment-details-form').append('<p>By clicking you are confirming that you are the account holder of a personal bank or building society account and the sole required signatory on the account and that you wish to set up a Direct Debit.</p>');
+
+// hide empty h3 that's causing top margin
+$('.field-group.bank-details h3').hide();
+
+// SECTION 4 ARRANGEMENT 
+$('.field-group.gift-aid .checkbox:eq(2)').after($('.field-group.gift-aid p:eq(10)'));
+// change yes checkbox giftaid copy
+$('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_DonationSection_CheckBoxListGiftAid label').html('Yes, I am a UK tax payer and I would like IRC-UK to treat all donations I have made over the past four years and all donations I make in the future (unless I notify you otherwise) as Gift Aid donations. Additional income raised through Gift Aid will be unrestricted and used to help support IRC-UK’s vital work across the world.*');
+$('.field-group.gift-aid p:eq(11)').html('*I understand that if I pay less Income Tax and/or Capital Gains Tax than the amount of Gift Aid claimed on all my donations in that tax year it is my responsibility to pay any difference. I also understand that IRC-UK will reclaim Gift Aid on donations made in the tax year in which they are received and that other taxes such as Council Tax and VAT do not count for this purpose.')
+$('.field-group.gift-aid p:eq(11)').before('<hr>');
+
+// SECTION 5 ARRANGEMENT
+// move data-protection section to step 5
+$('.field-group.data-protection').appendTo($('.step5'));
+// add bootstrap columns to data proction section
+$('.fieldset.step5.communication-form .field-group.data-protection').prepend('<div class="row"></div>');
+for (var i = 0; i < 3; i++) {
+  $('.fieldset.step5.communication-form .row').append('<div class="col-xs-4"></div>');
+  $('.fieldset.step5.communication-form .row .col-xs-4:eq('+i+')').append($('.fieldset.step5.communication-form .field.checkbox:eq('+i+')'));
+  $('.fieldset.step5.communication-form .row .col-xs-4:eq('+i+')').append($('.fieldset.step5.communication-form p:eq('+i+')'));
+}
+// add unsubscribe copy
+
+$('.field-group.data-protection.highlight:eq(2)').append('<p>Unsubscribe</p>');
+$('.field-group.data-protection.highlight:eq(2)').append('<p>We would really like to keep you informed about our projects and fundraising activities by post, telephone and email. However, if you decide you would rather not receive such information from us please email contactus@rescue-uk.org, phone 020 7692 0405 or write to IRC, 3 Bloomsbury Place, London, WC1A 2QL. Thank you.</p>');
+// hide opt in copy
+$('.pre-submit-opt-in').hide();
+
+// change next button copy
+$('#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_SubmitButton').val('Make donation');
+
+// repositioning error fields
+$('span.error').each(function(){
+    var thisParent = $(this).parent();
+    thisParent.append($(this));
+});
+
+// add footer to page
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('.dd-form-wrapper').after('<div class="page-footer"></div>');
+} else {
+    $('.columns.clear').after('<div class="page-footer"></div>');
+}
+$('.page-footer').append('<p>IRC-UK is a registered charity, number 1065972 Copyright &copy; International Rescue Committee, 2016</p>');
+$('.page-footer').append('<div class="nav-links"><ul></ul></div>');
+$('.page-footer ul').append('<li>Global Affiliates: <a>IRC US</a> <div class="circle"></div> <a>Stichting Vluchteling</a></li>');
+$('.page-footer ul').append('<li><a>Privacy Policy</a></li>');
+$('.page-footer ul').append('<li><a>Terms and Conditions</a></li>');
+$('.page-footer').append('<div class="clearfix"></div>');
+      //on donate button click
+
+      $('.amount-btn').click(function(){
+          
+              //remove selected from all other donate buttons
+              $('.amount-btn').removeClass('selected');
+
+              //remove other amount
+             $('.donation:eq(0) input:eq(1)').val($(this).attr('data-value'));
+            
+              //display label as selected 
+              $(this).addClass('selected');
+
+              var nextPlace = $('.direct-debit:eq(0)');
+              //$(window).scrollTo($(nextPlace), 800);
+
+              /*
+              var newAmountGA = $(this).attr('data-value');
+
+              var newGA  = parseFloat(newAmountGA)+parseFloat(precise_round(parseInt(newAmountGA)/5, 2));
+
+              if($('.gift-aid').find('input:eq(0)').prop('checked')){
+                //they've selected giftaid so we need to change the copy
+                
+                $('.gift-aid').find('p:eq(1)').html("With Gift Aid your &pound;"+newAmountGA+" donation is now worth &pound;"+newGA+", at no extra cost to you.");
+              }
+              */
+
+        });
+
+
+        //if already has donate amount that links with button then click it
+        if($('.donation:eq(0) input:eq(1)').val() != ""){
+          var existingAmount = $('.donation:eq(0) input:eq(1)').val();
+          $('.amount-btn').each(function(){
+            if($(this).attr('data-value') == Math.round(existingAmount)){
+              $(this).click();
+            }
+          });
+        } 
+
+        $('.donation:eq(0) input:eq(1)').change(function(){
+              var newAmountGA = $(this).val();
+
+              var newGA  = parseFloat(newAmountGA)+parseFloat(precise_round(parseInt(newAmountGA)/5, 3));
+
+              if($('.gift-aid').find('input:eq(0)').prop('checked')){
+                //they've selected giftaid so we need to change the copy
+                
+                $('.gift-aid').find('p:eq(1)').html("With Gift Aid your &pound;"+newAmountGA+" donation is now worth &pound;"+newGA+", at no extra cost to you.");
+              }
+
+              //remove button selection if input is different value
+
+              var amountFlag= false;
+              $('.amount-btn').each(function(){
+                if($(this).attr('data-value') == Math.round(newAmountGA)){
+                  amountFlag = true;
+                }
+              });
+
+              if(amountFlag == false){
+                $('.amount-btn').removeClass('selected');
+              }
+        
+              console.log(amountFlag);
+        });
+
+        $('.optin-checkbox').change(function(){
+          //console.log("CHANGE: "+$(this).prop('checked'));
+        });
+
+        //on email change update hidden confirm email field
+        $('.about-you .field:eq(4)').change(function(){
+          var userEmail = $(this).find('input').val();
+          $('.hidden-confirmation input').val(userEmail);
+          //console.log("email-change: "+userEmail);
+        }); 
+
+        //add email etc
+        person["firstname"] = getParameterByName("firstname");
+        person["email"] = getParameterByName("email");
+        person["zip"] = getParameterByName("zip");
+        person["lastname"] = getParameterByName("lastname");
+        person["phone"] = getParameterByName("phone");
+
+        if(person["lastname"] !=""){
+            $('.lastname-field').val(person["lastname"]);
+        }
+
+        if(person["phone"] !=""){
+            $('.phone-field').val(person["phone"]);
+        }
+
+        if(person["email"] !=""){
+            var userEmail = person["email"];
+            $('.hidden-confirmation input').val(userEmail);
+        }
+
+        if(person["firstname"] != ""){
+            $('h1, h2, h3, p').each(function(){
+              $(this).html($(this).html().replace("%%firstname%%", person['firstname']));
+              $(this).html($(this).html().replace("%%Firstname%%", person['firstname']));          
+            });
+            $('.firstname-field').val(person["firstname"]);
+        } else {
+            $('h1, h2, h3, p').each(function(){
+              $(this).html($(this).html().replace(" %%firstname%%,", ""));
+              $(this).html($(this).html().replace(" %%Firstname%%,", ""));     
+              $(this).html($(this).html().replace(" %%firstname%%", ""));
+              $(this).html($(this).html().replace(" %%Firstname%%", ""));     
+              $(this).html($(this).html().replace("%%firstname%%,", ""));
+              $(this).html($(this).html().replace("%%Firstname%%,", ""));     
+              $(this).html($(this).html().replace("%%firstname%%", ""));
+              $(this).html($(this).html().replace("%%Firstname%%", ""));        
+            });
+
+        }
+
+        if(getParameterByName("img") != ""){
+            //console.log(getParameterByName("img"))
+            $('body').css('background-image', 'url("'+getParameterByName("img")+'")');
+            $('#blanket').css('background-image', 'url("'+getParameterByName("img")+'")');
+        }
+
+        if(getParameterByName("default_amt") != ""){
+            var default_amt = getParameterByName("default_amt");
+            var foundDefaultAmt = false;
+            $('.amount-btn').each(function(){
+                if($(this).attr('data-value') == default_amt){
+                    $(this).trigger('click');
+                    foundDefaultAmt = true;
+                } 
+            });
+            if(foundDefaultAmt == false){
+                $('.donation:eq(0) input:eq(1)').val(default_amt);
+            }
+        }
+
+        $(".optin-checkbox").prop('checked', true);
+        //console.log("checked box!")
+
+
+        if($('.dd-form').find('li').length){
+          $('.dd-form').find('li').each(function(){
+            var errorHtml = $(this).html();
+            var gaError = "";
+            switch(errorHtml) {
+                case "Please enter a valid amount":
+                    gaError = "amount"
+                    break;
+                case "Please enter your First Name":
+                    gaError = "firstname"
+                    break;
+                case "Please enter your Last Name":
+                    gaError = "lastname"
+                    break;
+                case "There is a problem with your email address, please review and fix":
+                    gaError = "email"
+                    break;    
+                case "Account Name Error - please retry":
+                    gaError = "account name"
+                    break;
+                case "Please enter a six digit Sort Code - do not include dashes or spaces":
+                    gaError = "sortcode"
+                    break;
+                case "Please do not include dashes or spaces":
+                    gaError = "account num"
+                    break;    
+                case "Address 1 Error ":
+                    gaError = "address 1"
+                    break;
+                case "Please enter your Town or City":
+                    gaError = "town city"
+                    break;
+                case "Please enter a valid Postcode":
+                    gaError = "postcode"
+                    break;
+                case "The bank details you have entered are not valid - you must either correct the details or select the check box to proceed":
+                    gaError = "bank-details-invalid"
+                    break;                                  
+            }
+            console.log(errorHtml);
+            console.log(gaError);
+            //ga('send', 'event', 'dd-error', gaError);
+
+          });
+        }
+
+
+      }
+  });
+// ]]></script>
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<style>
+
+.header-image {
+  background-image: url(https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/header-img.jpg);
+  background-size : contain;
+}
+
+
+p, .step2 a {
+
+  font-family: AkzidenzGroteskBERegular, sans-serif;
+  color: rgb(50, 50, 50);
+}
+
+.dd-form div.fieldset .field input[type=text], .dd-form div.fieldset .field select {
+  font-size: 18px;
+  font-family: AkzidenzGroteskBERegular, sans-serif;
+  color: rgb(50, 50, 50);
+}
+
+select {
+    box-shadow: none !important;
+}
+
+.numbered-circle {
+    margin-right: 17px;
+}
+
+span.red {
+    color: red;
+}
+
+.intro-copy {
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 40px;
+}
+.intro-copy h1 {
+  font-family: "AkzidenzGroteskBEBold" , sans-serif;
+}
+.intro-copy p {
+  font-family: "AkzidenzGroteskBERegular", sans-serif;
+}
+
+.intro-copy p {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 20px;
+    color: black;
+}
+.intro-copy p:nth-child(4) {
+    font-size: 18px;
+}
+
+.inline-bar {
+    float: left;
+    margin-right: 25px;
+    position: relative;
+    top: 17px;
+}
+
+.logo {
+    height: 110px;
+    float: left;
+}
+.logo-donations {
+   float: right;
+   height: 77px;
+}
+
+.dd-form div.fieldset .required > label:after {
+  content: " *";
+  color: rgb(243, 61, 25);
+}
+
+.dd-form div.fieldset .required > label:before {
+  content: "" !important;
+}
+/* step 1 css */
+
+.step1.donation-form .error {
+    text-align: left;
+}
+div.dd-form-wrapper div.dd-form .step1.fieldset label {
+  width: inherit;
+}
+
+.step1 p, .step2 a{
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 14px;
+}
+
+.step1 input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.dd-form .step1.fieldset .field label {
+  padding-top: 14px;
+}
+
+.dd-form .step1.fieldset .field input[type=text]{
+    float: left !important;
+    width: 88px;
+}
+
+.dd-form .step1.fieldset .field {
+    margin: 20px 0;
+}
+.dd-form .dd-confirmation p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+span.currency {
+    float: left;
+    font-size: 14px;
+    font-family: AkzidenzGroteskBEBold , sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 15px;
+}
+
+.dd-form div.fieldset .date.field select:nth-child(2) {
+  width: 80px;
+}
+
+.dd-form div.fieldset .date.field select:nth-child(3) {
+  width: 137px;
+}
+
+.dd-form div.fieldset .date.field select:nth-child(4) {
+  width: 100px;
+}
+
+/* STEP 2 CSS */
+.dd-form .step2.fieldset .field select {
+  margin-left: 0;
+}
+
+.dd-form .step2.fieldset .field label {
+  width: 126px;
+  padding-top: 13px;
+}
+.step2 select {
+    width: 100px;
+}
+
+.step2 a {
+  text-decoration: underline;
+}
+
+.field.text.addressLookup {
+  margin: 0 !important;
+}
+.plhCapturePlusNew .field-group {
+    padding-left: 22px;
+    margin-left: 38px;
+    padding-right: 20px;
+    margin-right: 40px;
+    background: rgb(246, 246, 246);
+}
+
+.about-you .field-row {
+    margin: 20px 0;
+    margin-top: 0px;
+}
+
+.address .field, .step3 .field {
+  width: 46%;
+  display: inline-block !important;
+}
+div.fieldset div.field.next-step {
+  display: none !important;
+}
+
+#manual-address-btn {
+  width: inherit;
+}
+
+.dd-form div.fieldset .field.addressLookup input[type="text"] {
+    padding: 0 6px;
+    font-size: 17px;
+    box-sizing: content-box;
+}
+
+.bank-details .field {
+    margin-bottom: 20px !important;
+}
+
+.step3.payment-details-form p {
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 60px;
+    margin-right: 60px;
+    max-width: 660px;
+    margin-bottom: 40px;
+}
+/* step 4 css */
+.dd-form div.fieldset .field-group.gift-aid {
+  background-image: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0;
+}
+
+.step4 p {
+  font-size: 14px;
+}
+.step4 strong {
+    font-family: "AkzidenzGroteskBEBold", sans-serif;
+    font-size: 18px;
+}
+.step4 p:nth-child(2) {
+    font-size: 16px;
+}
+
+.field-group.gift-aid p:nth-child(5) {
+    font-style: italic;
+}
+
+div.dd-form-wrapper div.dd-form .step4.fieldset label {
+    font-size: 14px;
+}
+
+/* step 5 */
+
+.dd-form .step5.fieldset .highlight {
+  background-color: transparent;
+  padding: 0;
+  text-align: left;
+  display: block;
+  padding: 20px 30px;
+}
+.dd-form .step5.fieldset .highlight .field {
+  background-color: transparent;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dd-form .step5.fieldset .highlight h3 {
+  display: none;
+}
+
+.dd-form .step5.fieldset .highlight .field.checkbox label{
+  font-family: "AkzidenzGroteskBEBold", sans-serif;
+  width: inherit;
+}
+
+.dd-form .step5.fieldset .highlight .row p {
+    padding: 0 10px;
+    margin: 0 20px;
+}
+
+.dd-form div.fieldset .highlight > p:nth-child(3) {
+    font-family: AkzidenzGroteskBEBold, sans-serif;
+    margin-bottom: 0;
+    margin-top: 50px;
+    margin: 50px 20px 0 20px;
+}
+.dd-form div.fieldset .highlight > p:nth-child(4) {
+    margin: 10px 20px;
+}
+
+.dd-form .submit {
+  text-align: left;
+  padding: 0 30px;
+  padding-bottom: 30px;
+}
+    
+.step5 .row {
+    padding: 0 10px;
+}
+
+.page-footer {
+    background: black;
+    padding: 20px 40px;
+    padding-top: 35px;
+    font-size: 11px;
+}
+/***** media queries ****/
+
+@media (max-width: 1215px) {
+
+  .step2 .field, .step3 .field {
+    width: 43%;
+  }
+}
+
+@media (max-width: 1225px) {
+  .columns.clear {
+    width: 95%;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+
+
+  .step3.payment-details-form p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .columns.clear {
+    width: 100%;
+  }
+  .logo-donations{
+    display: none;
+  }
+  .header-image {
+    background-size: 140% !important;
+    border-bottom: rgb(253, 197, 19) 8px solid;
+    padding-top: 37.5611% !important;
+    background-position-y: -42px !important;
+  }
+  .header-image.confirmation-page {
+    background-position-y: 0 important;
+    padding-top: 46.5611% !important;
+  }
+  .header-image.summary-page {
+    background-position-y: 0 important;
+    padding-top: 46.5611% !important;
+  }
+  .logo {
+    height: 105px;
+  }
+  .intro-copy {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 0;
+  }
+  .inline-bar {
+    display: none;
+  }
+  .field-group {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .dd-form .step1.fieldset .field input[type=text] {
+    float: left !important;
+    clear: left;
+  }
+
+  .dd-form div.fieldset .date.field select:nth-child(2) {
+    clear: left;
+    width: 74px;
+  }
+  .dd-form div.fieldset .date.field select:nth-child(4) {
+    width: 80px;
+  }
+
+  .about-you .field-row, .address .field-row {
+    margin: 0 auto;
+    max-width: 360px;
+
+  }
+  .step2 .field, .step3 .field {
+    width: 100%;
+  }
+  .dd-form .step2.fieldset .field select {
+    clear: left;
+    width: 100%;
+  }
+  .dd-form div.fieldset .field input, .dd-form div.fieldset .field select, .dd-form div.fieldset .field label  {
+    float: none;
+  }
+  .dd-form div.fieldset .field {
+    margin: 0;
+  }
+  .plhCapturePlusNew .field-group {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+    padding-right:40px;
+  }
+  #manual-address-btn {
+    display: block;
+    text-align: left;
+  }
+  .dd-form div.fieldset .field.addressLookup input[type="text"] {
+    box-sizing: inherit;
+  }
+
+  .dd-form div.fieldset .field.addressLookup {
+    margin: 0 auto !important;
+    max-width: 339px;
+  }
+  .step2 .field-group.address, .step3 .field-group.bank-details {
+    max-width: 384px;
+    margin: 10px auto;
+  }
+  .dd-form div.fieldset .field input[type=text], select {
+    max-width: 20em;
+  }
+  .fieldset.step3.payment-details-form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .fieldset.step4.gift-aid-form p, .gift-aid .checkbox, .field-group.data-protection.highlight p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .dd-form div.fieldset hr {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .data-protection .row p {
+    display: none;
+  }
+  body {
+    background: white;
+  }
+
+  #ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_FormControl1_ValSummary {
+    margin: 20px;
+    position: relative;
+    top: 0;
+  }
+  .dd-form .submit {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .field-group.bank-details .field {
+    margin-bottom: 20px !important;
+  }
+
+.dd-form .step-title2, .dd-form .step-title3 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+  .logos-wrapper {
+     width: 90%;
+    max-width: 1400px;
+}
+.columns.clear {
+    max-width: 1400px;
+     width: 90%;
+     bottom: 183px;   
+}
+
+.logo {
+    position: relative;
+    right: 3%;
+   margin-top: 16px;
+}
+.logo-donations {
+   margin-top: 16px;
+}
+.dd-form .step2.fieldset .about-you .field label {
+    left: 0 !important;
+  }
+
+
+}
+@media (min-width: 650px) {
+    .logo {
+       height: 149px;
+    }
+   .logo-donations {
+      height: 104px;
+    }
+}
+@media (min-width: 768px) {
+  .columns.clear {
+     bottom: 183px;    
+  }
+  .confirmation-page.columns.clear, .summary-page.columns.clear {
+    bottom: 114px;
+  }
+}
+
+@media (min-width: 768px) {
+  #manual-address-btn {
+    text-align: left;
+    display: inline;
+    position: relative;
+    top: 15px;
+    float: left;
+    padding-left: 30px;
+
+  }
+}
+
+@media (min-width: 992px) {
+  .columns.clear {
+     bottom: 256px;    
+  }
+  .confirmation-page.columns.clear, .summary-page.columns.clear {
+    bottom: 124px;
+  }
+}
+@media (min-width:1200px) {
+  .columns.clear {
+     bottom: 291px;    
+  }
+  .confirmation-page.columns.clear, .summary-page.columns.clear {
+    bottom: 174px;
+  }
+}
+
+/* Confirmation page css */
+.header-image.confirmation-page{
+  background-image: url(https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/confirmation-header-img.jpg);
+  background-size: cover;
+  background-position-y: 0 !important;
+}
+
+.thank-you-intro {
+  margin: 20px 40px;
+  color: black !important;
+}
+.thank-you-intro p {
+  font-size: 20px;
+  margin-bottom: 0;
+    color: black;
+  max-width: 600px;
+}
+.thank-you-intro h1 {
+  font-size: 60px;
+  font-family: "AkzidenzGroteskBEBold", sans-serif;
+  margin-top: 0;
+
+}
+
+.infograph-row1 {
+  background-color: rgb(253, 197, 19);
+  padding: 20px;
+}
+.infograph-row2 {
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+}
+
+.infograph-row1 h2 {
+  font-size: 40px;
+  font-family: "AkzidenzGroteskBEBold", sans-serif;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.infograph-row1 .inline-bar {
+   top: 25px;
+}
+.infograph-row1 p, .infograph-row2 p {
+    font-size: 17px;
+      color: black;
+}
+.infograph-row1 .large-stat, .infograph-row2 .large-stat {
+  font-size: 50px;
+  font-family: "AkzidenzGroteskBEBold", sans-serif;
+    color: black;
+  display: block;
+  line-height: 1;
+}
+
+.infograph-row1 .col-xs-12.col-sm-4:nth-child(2) {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.infograph-row2 .col-xs-12.col-sm-4:nth-child(2) {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-right: 14px;
+    position: relative;
+}
+.legend:nth-child(1) .circle {
+    background: rgb(253, 197, 19);
+}
+.legend:nth-child(2) .circle {
+    background: black;
+}
+.legend:nth-child(3) .circle {
+    background: rgb(179, 179, 179);
+}
+
+.legend p {
+  display: inline;
+  font-size: 14px;
+}
+.bold {
+  font-family:  "AkzidenzGroteskBEBold", sans-serif;
+}
+.infograph-row2 .col-xs-12 .col-xs-6:nth-child(3) {
+    text-align: left;
+}
+.infograph-row2 .graph-header {
+  margin-bottom: 30px;
+}
+.legend:nth-child(1) {
+    margin-top: 20px;
+}
+.legend {
+    margin-bottom: 5px;
+}
+.infograph-row2 .subscribe-btn {
+    font-size: 13px;
+    display: inline;
+    margin: 10px;
+    border-bottom: 1px solid rgb(253, 197, 19);
+    color: black;
+    cursor: pointer;
+}
+.infograph-row2 input[type="text"] {
+    padding: 5px;
+    width: 200px;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
+.infograph-row2 .col-xs-12.col-sm-4:nth-child(3) p:nth-child(4) {
+    margin-top: 30px;
+}
+.infograph-row2 .col-xs-4:nth-child(1) img {
+    margin-top: 27px;
+}
+
+.social-icons img {
+    margin-right: 27px;
+}
+.page-footer p, .page-footer li {
+  color: rgb(141, 141, 141);
+  font-family: "AkzidenzGroteskBERegular", sans-serif;
+}
+.page-footer .nav-links {
+  float: right;
+}
+.page-footer ul
+{
+    list-style-type: none;
+}
+.page-footer li {
+    display: inline;
+    border-right: 1px solid rgb(141, 141, 141);
+    padding: 5px 20px;
+}
+.page-footer p {
+  float: left;
+}
+
+.page-footer .circle {
+    background: rgb(141, 141, 141);
+    height: 4px;
+    width: 4px;
+    margin: 2px;
+}
+.page-footer a {
+  color: white;
+  cursor: pointer;
+}
+.page-footer a:hover {
+  color: gray;
+}
+.nav-links li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+img.info-icon {
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 1090px) {
+    .page-footer .nav-links {
+      float: left;
+      clear: left;
+    }
+    .page-footer .nav-links ul, .page-footer .nav-links ul li:first-child {
+      padding-left: 0;
+    }
+}
+@media (max-width: 1090px) {
+  .infograph-row1 p, .infograph-row2 p {
+    font-size: 15px;
+  }
+  .infograph-row1 .large-stat, .infograph-row2 .large-stat {
+    font-size: 44px;
+  }
+  .infograph-row1 img, .infograph-row2 img.info-icon {
+    width: 100%;
+  }
+}
+@media (max-width: 964px) {
+  .infograph-row2 .subscribe-btn {
+    margin-left: 0;
+    display: block;
+    width: 62px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .infograph-row1 .large-stat, .infograph-row2 .large-stat {
+    font-size: 35px;
+  }
+  .legend p {
+    font-size: 13px;
+  }
+  .legend .area {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .infograph-row2 .subscribe-btn {
+    margin-left: 10px;
+    display: inline;
+  }
+
+  .legend .area {
+    display: inline;
+    font-size: 15px;
+  }
+  .infograph-row1 img, .infograph-row2 img.info-icon {
+    width: auto;
+  }
+  .infograph-row1 .col-xs-12.col-sm-4:nth-child(2) {
+    border-left: none;
+    border-right: none;
+  }
+  .infograph-row1 .col-xs-12.col-sm-4, .infograph-row2 .col-xs-12.col-sm-4 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .thank-you-intro {
+    margin: 20px 20px;
+  }
+  .infograph-row1 p, .infograph-row2 p {
+    font-size: 17px;
+  }
+  .infograph-row1 .large-stat, .infograph-row2 .large-stat {
+    font-size: 50px;
+  }
+  .infograph-row2 .col-xs-12.col-sm-4:last-child {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .infograph-row1 {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 569px) {
+  .page-footer li {
+    display: block;
+    padding: 5px 0;
+    border-right: none;
+  }
+}
+
+/* summary page css */
+
+.summary-page.header-image{
+  background-image: url(https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/confirmation-header-img.jpg);
+  background-size: cover;
+  background-position-y: 0 !important;
+}
+
+.summary-page.columns.clear {
+  margin: 0 auto !important;
+  background: white;
+}
+.summary-page .dd-form {
+  margin-bottom: 0;
+  padding-top: 20px;
+}
+.summary-page div {
+  font-family: AkzidenzGroteskBERegular, sans-serif;
+}
+
+.summary-page .dd-form dt, .summary-page .dd-form dd {
+  width: 48%;
+}
+.summary-page .gift-aid {
+  text-align: center;
+}
+
+#warning-box {
+  font-family: AkzidenzGroteskBEBold, sans-serif;
+}
+.dd-form h3 {
+    font-family: AkzidenzGroteskBEBold, sans-serif;
+}
+.summary-page .dd-form .submit input {
+  font-family: AkzidenzGroteskBEBold, sans-serif;
+  background-position: 263px 21px;
+  margin: 0 auto;
+  display: block;
+}
+
+input#ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder234_SummaryControl1_EditButton {
+    margin: 0;
+    cursor: pointer;
+}
+@media (max-width: 533px) {
+  .summary-page .dd-form .submit {
+    padding: 0;
+  }
+}
+.modalcontent img {
+  margin: 0 auto;
+}
+.modal-icon {
+  float: left;
+}
+.button-wrap img {
+  margin: 0;
+  display: inline;
+}
+.modalcontent .twitter-wrap, .modalcontent .fb-wrap {
+  max-width: 291px;
+    margin: 0 auto;
+}
+.media-button {
+  display: block;
+  background: rgb(253, 197, 19);
+  margin-left: 46px;
+  height:36px;
+  font-family: AkzidenzGroteskBEBold, sans-serif;
+  padding: 8px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: black;
+  cursor:pointer;
+}
+.media-button:hover, .media-button:focus {
+  color: black;
+}
+.close-btn {
+  background: rgb(233, 233, 233);
+    display: inline;
+    float: left;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    font-family: AkzidenzGroteskBEBold, sans-serif;
+    position: relative;
+    padding-left: 7px;
+    padding-top: 2px;
+    cursor:pointer;
+}
+@media (min-width: 783px) {
+  .twitter-wrap {
+    margin-top: 17px !important;
+  }
+  .twitter-wrap .button-wrap {
+    margin-top: 10px
+  }
+}
+@media (max-width: 782px) {
+  .twitter-wrap, .fb-wrap {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+}
+</style>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1826190777657084',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!--Optimizely-->
+<script src="https://cdn.optimizely.com/js/2797760799.js"></script>
+<!-- End Optimizely -->
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W89HB9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W89HB9');</script>
+<!-- End Google Tag Manager -->

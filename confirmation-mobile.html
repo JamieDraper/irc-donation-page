@@ -1,0 +1,189 @@
+<script type="text/javascript">// <![CDATA[
+    $(function(){
+	    	console.log("SIUMMARY!");
+	    	$('.tab-nav-wrap').remove();
+	    	//$('.summary-title').remove();
+
+			$('#acknowledgement-text').remove();
+			$('.dd-acknowledgement').remove();
+
+			$('.header h3').remove();
+			$('.header h1').text("You're helping us save lives.");
+
+                        $('.dd-form-h3').after("<div class='confirm-text-container'><h3>Thank you so much. Your Direct Debit has successfully been set up and you'll receive a confirmation email in the next few minutes.</h3><h3>Your new donations will help defend those facing execution and, thanks to you, we’re one step closer to worldwide abolition of capital punishment.</h3><h3>If it weren’t for your generosity Reprieve would cease to exist, so thank you so much once again. It really is great to have you with us.</h3></div>");
+$('.dd-confirmation').find('h3:eq(0)').prev('hr').prev('p').html('If you have any queries, please email info@reprieve.org.uk, call 020 7553 8140 or write to Reprieve, PO Box 72054, London, EC3P 3BZ.');
+$(".fieldset.confirmation-page").remove();
+$(".dd-form h2:eq(0)").remove();
+$('.dd-form-h3').remove();
+
+			$('.dd-form .closed').css('display','block');
+			$('.dd-form .closed').css('height','auto');
+			$('.dd-form .closed').removeClass('closed');   	
+			$('h2 .button').remove();
+var refNumber = $('.dd-confirmation p:eq(0) .refno').html();
+console.log(refNumber);
+var dataLayer = dataLayer || [];
+dataLayer.push({
+   "irc.uk.order_amount":"[rapidata_donation_amount]",
+   "irc.uk.order_id": refNumber,
+   "irc.uk.order_currency":"GBP",
+   "irc.uk.order_recurs_monthly":"No",
+   "irc.uk.order_gtm_state":"payment_made",
+ });	
+	});
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+$('.header-image').addClass('confirmation-page');
+$('.columns.clear').addClass('confirmation-page');
+// hide unwanted elements
+$('.fieldset.dd-confirmation p').hide();
+$('.fieldset.dd-confirmation h3').hide();
+$('.fieldset.dd-confirmation .highlight.dd-guarantee').hide();
+$('.fieldset.dd-confirmation .confirmation-buttons').hide();
+$('.fieldset.dd-confirmation dl').hide();
+
+$('.fieldset.dd-confirmation').append('<div class="thank-you-intro"</div>');
+$('.thank-you-intro').append('<p>Help rescue lives</p>');
+$('.thank-you-intro').append('<h1>Thank you!</h1>');
+$('.thank-you-intro').append('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>');
+
+$('.dd-form-wrapper.step5').after('<div class="infograph-row2"></div>');
+$('.dd-form-wrapper.step5').after('<div class="infograph-row1"></div>');
+$('.infograph-row1:eq(1)').remove();
+$('.infograph-row2:eq(1)').remove();
+
+$('.infograph-row1').append('<div class="row"></div>');
+$('.infograph-row2').append('<div class="row"></div>');
+
+$('.infograph-row1 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row1 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row1 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row1 .col-xs-12:eq(0)').append('<div class="col-xs-4"></div>');
+$('.infograph-row1 .col-xs-12:eq(0)').append('<div class="col-xs-8"></div>');
+$('.infograph-row1 .col-xs-12:eq(1)').append('<div class="col-xs-4"></div>');
+$('.infograph-row1 .col-xs-12:eq(1)').append('<div class="col-xs-8"></div>');
+$('.infograph-row1 .col-xs-12:eq(2)').append('<div class="col-xs-4"></div>');
+$('.infograph-row1 .col-xs-12:eq(2)').append('<div class="col-xs-8"></div>');
+
+$('.infograph-row2 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row2 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row2 .row').append('<div class="col-xs-12 col-sm-4"></div>');
+$('.infograph-row2 .col-xs-12:eq(0)').append('<div class="col-xs-4"></div>');
+$('.infograph-row2 .col-xs-12:eq(0)').append('<div class="col-xs-8"></div>');
+
+//add images and copy to infograph1
+$('.infograph-row1 .col-xs-4:eq(0)').append('<img class="info-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/graphic-world.png" />');
+$('.infograph-row1 .col-xs-8:eq(0)').append('<p>So far, only <span class="large-stat">17,000</span> of 4 million Syrian refugees have been re-settled in other countries.</p>');
+
+$('.infograph-row1 .col-xs-4:eq(1)').append('<img class="info-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/graphic-ship.png" />');
+$('.infograph-row1 .col-xs-8:eq(1)').append('<p>More than <span class="large-stat">800,000</span> people arrived on the shores of Greece in 2015; an estimated 57% were fleeing the conflict in Syria.</p>');
+
+$('.infograph-row1 .col-xs-4:eq(2)').append('<img class="info-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/graphic-person.png" />');
+$('.infograph-row1 .col-xs-8:eq(2)').append('<p>An average of <span class="large-stat">50</span> Syrian families are forced to flee their homes, every hour of every day.</p>');
+
+
+//add images and copy to infograph2
+$('.infograph-row2 .col-xs-4:eq(0)').append('<img class="info-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/graphic-money.png" />');
+$('.infograph-row2 .col-xs-8:eq(0)').append('<p>More than <span class="large-stat">90 pence</span> of every pound we spend worldwide goes directly to help refugees and others in desperate need.</p>');
+
+$('.infograph-row2 .col-xs-12:eq(1)').prepend('<p class="graph-header">Our efficiency maximizes your gift\'s impact</p>');
+
+$('.infograph-row2 .col-xs-12:eq(1)').append('<div class="col-xs-6"></div>');
+$('.infograph-row2 .col-xs-12:eq(1)').append('<div class="col-xs-6"></div>');
+
+$('.infograph-row2 .col-xs-12:eq(1) .col-xs-6:eq(0)').append('<img class="info-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/graphic-chart.png" />');
+
+$('.infograph-row2 .col-xs-12:eq(1) .col-xs-6:eq(1)').append('<div class="legend"><div class="circle"></div></div>');
+$('.infograph-row2 .col-xs-12:eq(1) .col-xs-6:eq(1)').append('<div class="legend"><div class="circle"></div></div>');
+$('.infograph-row2 .col-xs-12:eq(1) .col-xs-6:eq(1)').append('<div class="legend"><div class="circle"></div></div>');
+$('.infograph-row2 .legend:eq(0)').append('<p><span class="bold">93%</span> <span class="area">Programme</span></p>');
+$('.infograph-row2 .legend:eq(1)').append('<p><span class="bold">4%</span> <span class="area">Administration</span></p>');
+$('.infograph-row2 .legend:eq(2)').append('<p><span class="bold">3%</span> <span class="area">Fundraising</span></p>');
+
+
+$('.infograph-row2 .col-xs-12:eq(2)').append('<p class="bold">Follow us</p>');
+$('.infograph-row2 .col-xs-12:eq(2)').append('<div class="social-icons"></div>');
+$('.social-icons').append('<a href="https://twitter.com/IRCuk"><img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/social-twitter.png" /></a>');
+$('.social-icons').append('<a href="https://www.facebook.com/ircuk"><img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/social-fb.png" /></a>');
+$('.social-icons').append('<a href="https://www.instagram.com/theirc/"><img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/social-insta.png" /></a>');
+$('.social-icons').append('<a href="https://www.youtube.com/user/ircuk97"><img src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/social-youtube.png" /></a>');
+
+ $('<div id="myModal" class="modal"></div>').appendTo('body');
+$('.modal:eq(1)').remove();
+$('<div class="modalcontent"></div>').appendTo('.modal');
+$('.modalcontent:eq(1)').remove();
+// Style background
+  $('.modal').css({
+    'display' : 'block',
+    'position' : 'fixed',
+    'z-index' : '10px',
+    'left' : '0',
+    'top' : '0',
+    'width' : '100%',
+    'height' : '100%',
+    'overflow' : 'auto',
+    'background-color' : 'rgb(0,0,0)',
+    'background-color' : 'rgba(0,0,0,0.4)'
+  });
+// Style modal content box
+  $('.modalcontent').css({
+    'background-color' : 'rgb(246, 246, 246)',
+    'margin' : '15% auto',
+    'padding' : '20px',
+    'width' : '80%',
+    'border-radius': '0 !important',
+    'border-top' : 'rgb(253, 197, 19) 8px solid'
+  });
+
+$("<p class='heading'>Now help us spread the word</p>").appendTo('.modalcontent');
+$('.heading:eq(1)').remove();
+$('.heading').css({
+    'font-family': "AkzidenzGroteskBERegular",
+    'text-align': 'center',
+    'font-size': '18px'
+  });
+$('<div class="row"></div>').appendTo('.modalcontent');
+$('.modalcontent .row:eq(1)').remove();
+
+$('.modalcontent .row').append('<div class="col-xs-12 col-sm-6"></div>');
+$('.modalcontent .row .col-xs-12:eq(0)').append('<div class="twitter-wrap"></div>');
+$('.modalcontent .twitter-wrap:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(1)').append('<div class="fb-wrap"></div>');
+$('.modalcontent .fb-wrap:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(0) .twitter-wrap').append('<img class="img-responsive" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/twitter-preview.png" />');
+$('.modalcontent .row .col-xs-12:eq(0) .img-responsive:eq(1)').remove();
+
+$('.modalcontent .row .col-xs-12:eq(1) .fb-wrap').append('<img class="img-responsive" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/facebook-preview.png" />');
+$('.modalcontent .row .col-xs-12:eq(1) .img-responsive:eq(1)').remove();
+
+$('.modalcontent .row .col-xs-12:eq(0) .twitter-wrap').append('<div class="button-wrap"></div>');
+$('.modalcontent col-xs-12:eq(0) .button-wrap:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(1) .fb-wrap').append('<div class="button-wrap"></div>');
+$('.modalcontent col-xs-12:eq(1) .button-wrap:eq(1)').remove();
+$('.modalcontent .twitter-wrap .button-wrap').append('<img class="img-responsive modal-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/twitter-modal-icon.png" />');
+$('.modalcontent .twitter-wrap .modal-icon:eq(1)').remove();
+$('.modalcontent .fb-wrap .button-wrap').append('<img class="img-responsive modal-icon" src="https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/fb-modal-icon.png" />');
+$('.modalcontent .fb-wrap .modal-icon:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(0) .img-responsive:eq(2)').remove();
+$('.modalcontent .row .col-xs-12:eq(0) .button-wrap .modal-icon').after('<a href="https://twitter.com/intent/tweet?text=I%27ve%20just%20made%20a%20gift%20to%20@IRCuk%20to%20support%20people%20in%20crisis.%20Donate%20today%20bit.ly/donatetoirc" target="_blank" class="media-button">Tweet</a>');
+$('.modalcontent .row .col-xs-12:eq(0) .media-button:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(1) .button-wrap .modal-icon').after('<a href="javascript:;" class="media-button">Post</a>');
+$('.modalcontent .row .col-xs-12:eq(1) .media-button:eq(1)').remove();
+$('.modalcontent .row .col-xs-12:eq(0) .button-wrap .modal-icon').after($('.modalcontent .row .col-xs-12:eq(0) .media-button'));
+$('.modalcontent').prepend('<div class="close-btn">X</div>');
+$('.close-btn:eq(1)').remove();
+
+$('.close-btn').click(function(){
+    $('#myModal').css('display', 'none');
+  });
+$('.fb-wrap .media-button').click(function(){
+  console.log('fb-click');
+  FB.ui({
+    method: 'feed',
+    link: 'https://secure.edirectdebit.com/International-Rescue-Committee-UK/Regular/Desktop-Form-Page/Confirmation-Page/',
+    name: "Donate to IRCuk",
+    picture: "https://storage.googleapis.com/irc-donation-page.appspot.com/irc-dd-images/confirmation-header-img.jpg",
+    description: 'I just made a donation to #IRCuk to support people in crisis around the world. You can support them too, make a gift today bit.ly/donatetoirc Thanks',
+  }, function(response){});
+});
+// ]]></script>

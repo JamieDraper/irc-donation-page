@@ -1,0 +1,69 @@
+<script type="text/javascript">// <![CDATA[
+    $(function(){
+    	if(loadedSummaryScript == 0){
+	     	loadedSummaryScript++;
+	    	console.log("SIUMMARY!");
+	    	$('.tab-nav-wrap').remove();
+	    	$('.summary-title').remove();
+			$('#acknowledgement-text').remove();
+			$('.dd-acknowledgement').remove();
+			$('.tab-nav-wrap').remove();
+			$('.dd-form').wrapInner('<div class="col-md-8 col-md-offset-2">');
+			$('.dd-form').css('width','90%');
+			$('.dd-form').css('margin-left','5%');
+			$('.summary-confirm').appendTo('.dd-form');
+			$('.summary-confirm hr').remove();
+			$('.submit input:eq(1)').addClass('edit-button').appendTo('.dd-form .col-md-8');
+			$('.summary-confirm input').val("Set up direct debit");
+			$('.summary-confirm').prepend("<h1>Set up Direct Debit:</h1>");
+			$('.edit-button').val('Go back and edit');
+			$('.after-submit').appendTo('.payment-summary');
+			$('#after-submit').appendTo('.payment-summary');
+                        $('.dd-form-h3').remove(); 
+			$('.dd-form').prepend($('.header'));
+			$('.header h3').remove();
+			$('.header h1').text("Important: confirm your details");
+
+                         $('.summary-group.donation-payment dd:eq(1)').html("Monthly");
+			$('.dd-form .closed').css('display','block');
+			$('.dd-form .closed').css('height','auto');
+			$('.dd-form').css('margin-bottom','150px');
+			$('.dd-form .closed').removeClass('closed');   		
+                        $('.col-md-8 h2:eq(0)').remove();
+			$('.col-md-8').prepend('<div id="warning-box"><h3>You still need to complete your Direct Debit. Review these details and then click confirm to complete the setup.</h3></div>');
+                        $('.summary-confirm h1').html("Confirm Direct Debit");
+                        $('.submit input').val("Confirm Direct Debit");
+
+			$('.submit').clone().appendTo('.payment-summary');
+
+			$('.columns.clear').css('margin', '0');
+
+			$(window).scroll(function() {
+   				if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       				$('.summary-confirm').hide();
+   				} else {
+   	   				$('.summary-confirm').show();
+   				}
+			});
+    	}
+$('dl').css('text-align', 'center');
+$('.gift-aid').css('text-align', 'center');
+$('#warning-box').css('margin-top', '20px');
+
+var orderAmount = $('.donation-payment dl dd:eq(0)').text().trim().substring(1);
+
+var dataLayer = dataLayer || [];
+dataLayer.push({
+   "irc.uk.order_amount": orderAmount,
+   "irc.uk.order_id": "[rapidata_order_id]",
+   "irc.uk.order_currency":"GBP",
+   "irc.uk.order_recurs_monthly":"Yes",
+   "irc.uk.order_gtm_state":"payment_made",
+ });
+
+	});
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+$('.columns.clear').addClass('summary-page');
+$('.header-image').addClass('summary-page');
+// ]]></script>
